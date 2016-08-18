@@ -1,0 +1,53 @@
+Config de GitHub
+
+<?php
+// https://try.github.io/levels/1/challenges/1
+// Cheat Sheet : http://localhost/developpementS4/formation/03-Git/05-Cheat%20Sheet.php
+/*	INSTALLATION
+sudo apt-get install git-core
+*/
+/*	CONFIGURATION
+git config --global color.diff auto
+git config --global color.status auto
+git config --global push.default current
+git config --global pull.default current
+git config --global color.branch auto
+git config --global user.email "marchand.luc@free.fr"
+git config --global user.name "Lucky6468"
+*/
+/* 	INITIALISATION
+cd sites/developpement/PHP/tp06_Session
+git init
+git remote add origin https://github.com/Lucky6468/Developpement.git
+git remote -v
+git fetch
+// avec fetch on récupère la branche
+git checkout master
+// doit afficher [master] en rouge
+git pull
+// doit afficher [master] en rouge
+*/
+/* 	UTILISATION
+git add monfichier.txt
+// on surveille tout les fichiers avec git add .   (le point)
+git commit -m "Mon message" monfichier.txt
+git pull
+git push
+*/
+/*
+// Lors de l'ajout d'un fichier :
+git add FILE
+// Si jamais vous savez pas où vous en êtes :
+git status
+*/
+/* 	BRANCHING
+// Créer une branche
+git branch NOM_DE_LA_BRANCHE
+// Changer de branche
+git checkout NOM_DE_LA_BRANCHE
+// Combiner la branche actuelle avec une autre
+git merge NOM_DE_LA_BRANCHE
+// Supprimer une branche après utilisation
+git branch -d NOM_DE_LA_BRANCHE
+*/
+?>

@@ -1,0 +1,183 @@
+Press enter to submit commands
+> git init
+Initialized empty Git repository in /.git/
+Success!
+
+
+$ git status
+# On branch master
+#
+# Initial commit
+#
+nothing to commit (create/copy files and use "git add" to track)
+Success!
+// created a file called octocat.txt in the octobox repository 
+$ git status
+
+
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	octocat.txt
+nothing added to commit but untracked files present (use "git add" to track)
+
+Success!
+
+ 
+
+
+Updating 3852b4d..3e70b0f
+Fast-forward
+ yellow_octocat.txt |    1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 yellow_octocat.txt
+
+Success!
+
+$ git diff HEAD
+
+ 
+
+
+diff --git a/octocat.txt b/octocat.txt
+index 7d8d808..e725ef6 100644
+--- a/octocat.txt
++++ b/octocat.txt
+@@ -1 +1 @@
+-A Tale of Two Octocats
++[mA Tale of Two Octocats and an Octodog
+
+Success!
+
+$ git add octofamily/octodog.txt
+
+ 
+
+
+
+
+Success!
+
+$ git diff --staged
+
+ 
+
+
+diff --git a/octofamily/octodog.txt b/octofamily/octodog.txt
+new file mode 100644
+index 0000000..cfbc74a
+--- /dev/null
++++ b/octofamily/octodog.txt
+@@ -0,0 +1 @@
++[mwoof
+
+Success!
+
+$ git reset octofamily/octodog.txt
+
+ 
+
+
+
+Success!
+
+$ git checkout -- octocat.txt
+
+ 
+
+
+
+
+Success!
+
+$ git branch clean_up
+
+ 
+
+
+
+
+Success!
+
+$ git checkout clean_up
+
+ 
+
+
+Switched to branch 'clean_up'
+
+Success!
+
+$ git rm '*.txt'
+
+ 
+
+
+rm 'blue_octocat.txt'
+rm 'octocat.txt'
+rm 'octofamily/baby_octocat.txt'
+rm 'octofamily/momma_octocat.txt'
+rm 'red_octocat.txt'
+
+Success!
+
+$ git commit -m "Remove all the cats"
+
+ 
+
+
+[clean_up 63540fe] Remove all the cats
+ 5 files changed, 5 deletions(-)
+ delete mode 100644 blue_octocat.txt
+ delete mode 100644 octocat.txt
+ delete mode 100644 octofamily/baby_octocat.txt
+ delete mode 100644 octofamily/momma_octocat.txt
+ delete mode 100644 red_octocat.txt
+
+Success!
+
+$ git checkout master
+
+ 
+
+
+Switched to branch 'master'
+
+Success!
+
+$ git merge clean_up
+
+ 
+
+
+Updating 3852b4d..ec6888b
+Fast-forward
+ blue_octocat.txt             |    1 -
+ octocat.txt                  |    1 -
+ octofamily/baby_octocat.txt  |    1 -
+ octofamily/momma_octocat.txt |    1 -
+ red_octocat.txt              |    1 -
+ 5 files changed, 5 deletions(-)
+ delete mode 100644 blue_octocat.txt
+ delete mode 100644 octocat.txt
+ delete mode 100644 octofamily/baby_octocat.txt
+ delete mode 100644 octofamily/momma_octocat.txt
+ delete mode 100644 red_octocat.txt
+
+Success!
+
+$ git branch -d clean_up
+
+ 
+
+
+Deleted branch clean_up (was ec6888b).
+
+Success!
+
+$ git push
+
